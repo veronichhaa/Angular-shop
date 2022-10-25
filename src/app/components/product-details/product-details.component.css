@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  justify-content: center;
+  background-color: #692a1d;
+  /*flex: 1 1 auto;*/
+}
+
+.example-card{
+  margin: 10px;
+  /*width: 800px;*/
+  background-color: white;
+  color: black;
+  display: flex;
+}
+
+.mat-button{
+  background-color: #692a1d;
+  color: white;
+  padding: 0px 5px;
+}
+
+.mat-button:hover{
+  background-color: brown;
+}
+
+.mat-card-content{
+  padding: 10px;
+}

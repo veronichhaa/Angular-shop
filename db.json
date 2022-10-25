@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Вязание узоров крючком",
+      "image": "assets/1.jpg",
+      "info": {
+        "subtitle": "В. С. Кришталева",
+        "price": "10",
+        "duration": "200"
+      }
+    },
+    {
+      "id": 2,
+      "title": "The secret history",
+      "image": "assets/2.jpg",
+      "info": {
+        "subtitle": "Donna Tarth",
+        "price": "20",
+        "duration": "300"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Idiot",
+      "image": "assets/4.jpg",
+      "info": {
+        "subtitle": "Dostoevskiy",
+        "price": "30",
+        "duration": "300"
+      }
+    },
+    {
+      "id": 5,
+      "title": "The mountain is you",
+      "image": "assets/5.jpg",
+      "info": {
+        "subtitle": "Brianna Wiest",
+        "price": "20",
+        "duration": "200"
+      }
+    }
+  ]
+}

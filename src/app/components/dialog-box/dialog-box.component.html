@@ -1,0 +1,23 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Название</mat-label>
+    <input formControlName="title" matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Изображение</mat-label>
+    <input formControlName="image" matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Автор</mat-label>
+    <input formControlName="subtitle" matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Цена</mat-label>
+    <input formControlName="price" matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Количество страниц</mat-label>
+    <input formControlName="duration" matInput>
+  </mat-form-field>
+  <button mat-button type="submit">Добавить</button><button mat-button (click)="onNoClick()" type="button">Отмена</button>
+</form>

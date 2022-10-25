@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-card class="example-card">
+    <img width="400" src="{{product.image}}">
+    <mat-card-content>
+      <mat-card-title>{{product.title}}</mat-card-title>
+      <p>
+        Автор: {{product.info.subtitle}}
+      </p>
+      <p>Цена: {{product.info.price | currency}}</p>
+      <p>Количество страниц: {{product.info.duration}}</p>
+      <button mat-button>В КОРЗИНУ</button>
+    </mat-card-content>
+  </mat-card>
+</div>

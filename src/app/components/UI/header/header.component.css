@@ -1,0 +1,30 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.no-select{
+  user-select: none;
+}
+
+.toolbar{}
+
+.button{
+  margin-left: 5px;
+  background-color: #692a1d;
+}
+
+.button:hover{
+  background-color: brown;
+}
+
+.button:first-child{
+  margin-left: 0px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+.mat-icon{
+  margin-left: 2px;
+}

@@ -1,0 +1,43 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: start;
+  background-color: #692a1d;
+  /*height: 100%;*/
+}
+
+.example-card{
+  width: 200px;;
+  background-color: white;
+  margin: 10px;
+  color: black;
+}
+
+.mat-button{
+  background-color: #692a1d;
+  color: white;
+  padding: 0px 4px;
+}
+
+.mat-button:hover{
+  background-color: brown;
+}
+
+.mat-card-actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button{
+  margin-left: 4px;
+  background-color: #692a1d;
+}
+
+.button:hover{
+  background-color: brown;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
