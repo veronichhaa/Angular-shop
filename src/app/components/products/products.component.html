@@ -1,27 +1,52 @@
-<mat-toolbar class="toolbar no-select" *ngIf="canEdit">
-  <span class="example-spacer"></span><button class="toolbar button" mat-flat-button color="primary" routerLink="basket" (click)="openDialog()">Добавить товар</button>
-</mat-toolbar>
-<div class="container">
-  <mat-card class="example-card"  *ngFor="let product of products">
-    <mat-card-title>{{product.title}}</mat-card-title>
-    <img mat-card-image src="{{product.image}}" >
-    <mat-card-content>
-      <p>Цена: {{product.info.price | currency }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button [routerLink]="['/products', product.id]">Подробнее</button>
-      <button mat-button>В корзину</button>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <span>Ред.</span>
-        </button>
-        <button mat-menu-item>
-          <span (click)="deleteItem(product.id)">Удалить</span>
-        </button>
-      </mat-menu>
-    </mat-card-actions>
-  </mat-card>
+<div class="toolbar no-select" style="margin-top: 30px">
+  <h3>КАТАЛОГ</h3>
+  <button *ngIf="canEdit" class="button" (click)="openDialog()">ДОБАВИТЬ ТОВАР</button>
+  <span class="example-spacer"></span>
 </div>
+<!--<div class="toolbar no-select">-->
+<!--  <span>20</span>-->
+<!--  <mat-slider-->
+<!--    [(ngModel)]="price"-->
+<!--    color="primary"-->
+<!--    step="1"-->
+<!--    min="20"-->
+<!--    max="500">-->
+<!--  </mat-slider>-->
+<!--  <span>{{price}}</span>-->
+<!--  <span class="example-spacer"></span>-->
+<!--  <div class="example-form">-->
+<!--    <mat-form-field class="example-full-width">-->
+<!--      <mat-label style="margin-left: 30px;">ПОИСК</mat-label>-->
+<!--      <mat-icon>search</mat-icon>-->
+<!--      <input type="text" matInput placeholder="ПОИСК" [(ngModel)]="search">-->
+<!--    </mat-form-field>-->
+<!--  </div>-->
+<!--</div>-->
+    <div class="container" *ngIf="products">
+      <div class="card" *ngFor="let product of products | pricefilter:price:'info'|search:search:'title'">
+        <div class="card_image" [routerLink]="['/products', product.id]" style="cursor: pointer">
+          <img src="{{product.image}}">
+        </div>
+        <div class="card_info">
+          <div>
+            <div style="cursor: pointer" [routerLink]="['/products', product.id]">{{product.title}}</div>
+            <div>{{product.info.price | currency }}</div>
+          </div>
+          <div *ngIf="canEdit">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <span (click)="openDialog(product)">Ред.</span>
+              </button>
+              <button mat-menu-item>
+                <span (click)="deleteItem(product.id)">Удалить</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->

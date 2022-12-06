@@ -22,6 +22,12 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatSliderModule} from "@angular/material/slider";
+import {PriceFilterPipe} from "./pipes/pricefilter.pipe";
+import { SearchPipe } from './pipes/search.pipe';
+import {MatStepperModule} from "@angular/material/stepper";
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import {MatMenuModule} from "@angular/material/menu";
     BasketComponent,
     DialogBoxComponent,
     ProductsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    PriceFilterPipe,
+    SearchPipe,
+    CommentsComponent
   ],
     imports: [
         BrowserModule,
@@ -48,7 +57,10 @@ import {MatMenuModule} from "@angular/material/menu";
         MatInputModule,
         ReactiveFormsModule,
         FormsModule,
-        MatMenuModule
+        MatMenuModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatStepperModule
     ],
   providers: [],
   bootstrap: [AppComponent]

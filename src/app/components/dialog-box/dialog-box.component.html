@@ -1,23 +1,23 @@
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Название</mat-label>
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>НАЗВАНИЕ</mat-label>
     <input formControlName="title" matInput>
   </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Изображение</mat-label>
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>ИЗОБРАЖЕНИЕ</mat-label>
     <input formControlName="image" matInput>
   </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Автор</mat-label>
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>БРЕНД</mat-label>
     <input formControlName="subtitle" matInput>
   </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Цена</mat-label>
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>ЦЕНА</mat-label>
     <input formControlName="price" matInput>
   </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Количество страниц</mat-label>
+  <mat-form-field class="example-full-width" appearance="standard">
+    <mat-label>ОПИСАНИЕ</mat-label>
     <input formControlName="duration" matInput>
   </mat-form-field>
-  <button mat-button type="submit">Добавить</button><button mat-button (click)="onNoClick()" type="button">Отмена</button>
+  <button mat-button type="submit">{{isNew ? 'ДОБАВИТЬ' : 'ОБНОВИТЬ'}}</button><button mat-button (click)="onNoClick()" type="button">ОТМЕНА</button>
 </form>

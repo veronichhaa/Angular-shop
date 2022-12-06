@@ -4,17 +4,18 @@
 
 .no-select{
   user-select: none;
+  font-size: 22px;
 }
-
-.toolbar{}
 
 .button{
   margin-left: 5px;
-  background-color: #692a1d;
+  background-color: white;
+  color: #1D1D1D;
+  font-size: 16px;
 }
 
 .button:hover{
-  background-color: brown;
+  font-size: 17px;
 }
 
 .button:first-child{
@@ -24,7 +25,15 @@
 .logo{
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 .mat-icon{
   margin-left: 2px;
+}
+
+mat-toolbar{
+  background-color: white;
+  color: #1D1D1D;
+  border-bottom: 1.5px solid #1D1D1D;
+  padding: 0px 50px;
 }

@@ -1,28 +1,58 @@
 .container{
   display: flex;
   justify-content: center;
-  background-color: #692a1d;
-  /*flex: 1 1 auto;*/
-}
-
-.example-card{
-  margin: 10px;
-  /*width: 800px;*/
   background-color: white;
-  color: black;
+  font-size: 14px;
+  padding: 50px 0px;
+}
+
+.card_image{
+  width: 500px;
+}
+
+img{
+  width: 100%;
+}
+
+.card_info{
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  margin-left: 50px;
+  padding: 50px 0 10px 0;
 }
 
-.mat-button{
-  background-color: #692a1d;
+.card{
+  display: flex;
+  max-width: 1000px;
+  max-height: 450px;
+}
+
+.basket{
+  padding: 10px 10px;
+  background-color: #1D1D1D;
   color: white;
-  padding: 0px 5px;
+  max-width: 250px;
 }
 
-.mat-button:hover{
-  background-color: brown;
+.basket:hover{
+  background-color: white;
+  color: #1D1D1D;
+  border: #1D1D1D solid 1.5px;
+  cursor: pointer;
 }
 
-.mat-card-content{
-  padding: 10px;
+.back{
+  background-color: white;
+  color: #1D1D1D;
+  border: #1D1D1D solid 1.5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  max-width: 80px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  align-self: flex-start;
 }
+

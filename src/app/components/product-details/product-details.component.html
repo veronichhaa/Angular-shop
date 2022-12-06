@@ -1,14 +1,22 @@
 <div class="container">
-  <mat-card class="example-card">
-    <img width="400" src="{{product.image}}">
-    <mat-card-content>
-      <mat-card-title>{{product.title}}</mat-card-title>
-      <p>
-        Автор: {{product.info.subtitle}}
-      </p>
-      <p>Цена: {{product.info.price | currency}}</p>
-      <p>Количество страниц: {{product.info.duration}}</p>
-      <button mat-button>В КОРЗИНУ</button>
-    </mat-card-content>
-  </mat-card>
+  <div class="card">
+    <div class="card_image">
+      <button class="back" routerLink="/products" >
+        <mat-icon style="font-size: 14px; margin-bottom: -10px" >arrow_back_ios</mat-icon>
+        <span>НАЗАД</span>
+      </button>
+      <img src="{{product.image}}">
+    </div>
+    <div class="card_info">
+      <div style="gap: 20px">
+        <div style="font-size: 22px">{{product.title}}</div>
+        <div>АВТОР: {{product.info.subtitle}}</div>
+        <div>{{product.info.price | currency}}</div>
+      </div>
+      <div>
+       {{product.info.duration}}
+      </div>
+      <button class="basket" (click)="addToBasket(product)">В КОРЗИНУ</button>
+    </div>
+  </div>
 </div>
