@@ -1,0 +1,112 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.section1{
+  display: flex;
+  padding: 100px 50px;
+  justify-content: center;
+}
+
+.image{
+  flex-basis: 50%;
+  overflow: hidden;
+  height: 500px;
+}
+
+img{
+  height: 100%;
+}
+
+.info{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: -175px;
+  z-index: 1;
+
+}
+
+.button{
+  background-color: #1D1D1D;
+  color: white;
+  padding: 10px 30px;
+  width: 200px;
+  font-size: 20px;
+}
+
+button:hover{
+  background-color: white;
+  color: #1D1D1D;
+  cursor: pointer;
+}
+
+.infinite-line {
+  background: url("src/assets/line.svg") repeat-x;
+  width: 1250px;
+  height: 75px;
+  animation: animate 7s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0px 0px;
+  }
+
+  to {
+    background-position: 1000px 0px;
+  }
+}
+
+.newImg{
+  height: 400px;
+  width: 1000px;
+  overflow: hidden;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+  padding: 100px 50px;
+  align-items: center;
+}
+
+
+.back{
+  color: white;
+  border: white solid 1.5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -50px;
+  margin-left: 800px;
+  z-index: 1;
+}
+
+.back:hover{
+  color: white;
+}
+
+.image1{
+  width: 700px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.info1{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0px;
+  text-align: right;
+}
+
+.section3{
+  display: flex;
+  padding: 100px 100px;
+  justify-content: space-between;
+}

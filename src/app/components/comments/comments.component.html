@@ -2,16 +2,25 @@
   <section>
     <h3>ОТЗЫВЫ</h3>
     <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ghghg ghghghgh ghghghghg ghghghgh
+      МЫ ОТВЕТСТВЕННО ПОДХОДИМ К НАШЕМУ ДЕЛУ И ПОСТОЯННО СОВЕРШЕНСТВУЕМ РАБОТУ НАШЕГО ИНТЕРНЕТ-МАГАЗИНА, ПОЭТОМУ МЫ ВСЕГДА БЛАГОДАРНЫ ЗА ВАШУ ОБРАТНУЮ СВЯЗЬ И СТАРАЕМСЯ УЧИТЫВАТЬ ВАШИ РЕКОМЕНДАЦИИ И ПОЖЕЛАНИЯ!
     </p>
-    <p>
+    <p style="font-weight: bolder">
       ЧТОБЫ ПРОСТО ПОДЕЛИТЬСЯ ВПЕЧАТЛЕНИЯМИ О НАШЕЙ РАБОТЕ, НАЖМИТЕ НА КНОПКУ НИЖЕ.
     </p>
-    <button (click)="show()">
+    <button (click)="show()" style="  margin-top: -20px;">
       ОСТАВИТЬ ОТЗЫВ
     </button>
     <form [formGroup]="newComment" *ngIf="visibility" id="add" class="comments" style="gap: 10px; max-width: 600px">
+        <div class="validation">
+          <span *ngIf="(name?.dirty || name?.touched) && name?.invalid">Поле "имя" должно содержать больше 3 символов</span>
+        </div>
         <input formControlName="name" class="comment" type="text" placeholder="ВВЕДИТЕ ИМЯ">
+      <div class="validation">
+        <span *ngIf="text?.dirty || text?.touched ">
+            <span *ngIf="text?.invalid">Поле "текст" должно содержать больше 10 символов</span>
+            <span *ngIf="text!.errors?.['textValid']">Данное поле не может содержать нецензурные выражения!</span>
+        </span>
+      </div>
         <input formControlName="text" style="height: 100px;" class="comment" type="text" placeholder="КОММЕНТАРИЙ">
         <button style="margin-left: auto" type="submit"  (click)="addComment()">
           ОТПРАВИТЬ
@@ -19,10 +28,10 @@
     </form>
     <div class="comments">
       <div class="comment" *ngFor="let comment of comments">
-        <h4>
+        <h4 style="font-weight: bolder">
           {{comment.name}}
         </h4>
-        <p>
+        <p style="margin-top: -15px; font-size: 12px">
           {{comment.date}}
         </p>
         <p>

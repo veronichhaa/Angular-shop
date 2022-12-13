@@ -1,12 +1,13 @@
 .container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
   align-content: start;
   background-color: white;
   color: #1D1D1D;
   font-size: 14px;
-  padding: 30px 50px;
+  padding: 30px 50px 100px 50px;
 }
 
 
@@ -48,6 +49,7 @@ img{
   border-radius: 0px;
   color: white;
   padding: 0px 30px;
+  cursor: pointer;
 }
 
 mat-slider{

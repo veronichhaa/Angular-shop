@@ -55,6 +55,7 @@ export class BasketComponent implements OnInit {
   }
 
   openDialog(){
+    this.basket.forEach(item=>this.deleteProduct(item.id));
     let dialog = document.querySelector('dialog');
     if (dialog){
       dialog.showModal()

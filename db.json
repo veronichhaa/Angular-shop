@@ -81,40 +81,19 @@
       }
     }
   ],
-  "basket": [
+  "basket": [],
+  "comments": [
     {
-      "id": 8,
-      "title": "SPORTSTRACKSUIT TROUSERS IN BLACK",
-      "image": "assets/8.jpg",
-      "info": {
-        "subtitle": "3B SPORTS",
-        "price": "100",
-        "duration": "3B SPORTS ICON TRACKSUIT TROUSERS IN BLACK POPLIN"
-      },
-      "quantity": 1
+      "name": "ДАРЬЯ КЛИМКОВИЧ",
+      "date": "09.12.2022",
+      "text": "СПАСИБО! ЗАКАЗ ПРИШЕЛ РАНЬШЕ ОЖИДАЕМОЙ ДАТЫ, ВСЁ ПОДОШЛО.",
+      "id": 1
     },
     {
-      "id": 1,
-      "title": " PATCHED T-SHIRT HOODIE OVERSIZED",
-      "image": "assets/1.jpg",
-      "info": {
-        "subtitle": "BALENCIAGA",
-        "price": "100",
-        "duration": "XXXL PATCHED T-SHIRT HOODIE OVERSIZED IN LIGHT BEIGE AND BLACK CURLY FLEECE IS FROM THE LOOK 46 OF THE BALENCIAGA’S WINTER 22 COLLECTION, 360° SHOW."
-      },
-      "quantity": 2
-    },
-    {
-      "id": 4,
-      "title": "MEN'S PULL-OVER JACKET IN BLUE",
-      "image": "assets/4.jpg",
-      "info": {
-        "subtitle": "BALENCIAGA",
-        "price": "80",
-        "duration": "PULL-OVER JACKET IN BLUE JAPANESE DENIM IS FROM THE LOOK 52 OF THE BALENCIAGA’S WINTER 22 COLLECTION, 360° SHOW."
-      },
-      "quantity": 1
+      "name": "МАРИЯ НАРЕЙКО",
+      "date": "09.12.2022",
+      "text": "НАШЛА У ВАС В МАШАЗИНЕ ТО, ЧТО ДАВНО ИСКАЛА, ОСТАЛАСЬ ОЧЕНЬ ДОВОЛЬНА. СПАСИБО!",
+      "id": 2
     }
-  ],
-  "comments": []
+  ]
 }

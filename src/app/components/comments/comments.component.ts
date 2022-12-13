@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProductsService} from "../../services/products.service";
 import {IComments} from "../../models/comments";
 import {Subscription} from "rxjs";
-import {FormControl, FormGroup} from "@angular/forms";
+import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
 import {MatCalendar} from "@angular/material/datepicker";
 
 
@@ -21,10 +21,31 @@ export class CommentsComponent implements OnInit {
   visibility: boolean = false;
 
   newComment: FormGroup = new FormGroup({
-    name: new FormControl(''),
-    text: new FormControl('')
+    name: new FormControl('', [Validators.minLength(3), Validators.required]),
+    text: new FormControl('', [Validators.minLength(10), Validators.required, this.createCensorValidator()])
 
   })
+
+  createCensorValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      let valid = true;
+      console.log(control.value)
+      if(control.value.match('иэф'))
+      {
+        valid = false;
+      }
+      return !valid ? {textValid:false} : null;
+    };
+  }
+
+
+  get name(){
+    return this.newComment.get('name');
+  }
+
+  get text(){
+    return this.newComment.get('text');
+  }
 
   ngOnInit(): void {
     this.commentsSubscription = this.ProductsService.getComments().subscribe(

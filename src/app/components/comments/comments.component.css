@@ -51,3 +51,11 @@ input{
   background-color: white;
   border: none;
 }
+
+.validation{
+  font-size: 10px;
+  height: 15px;
+  color: red;
+  text-shadow: 0px 0px 1px red;
+}
+

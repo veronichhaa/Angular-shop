@@ -41,7 +41,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     ProductDetailsComponent,
     PriceFilterPipe,
     SearchPipe,
-    CommentsComponent
+    CommentsComponent,
   ],
     imports: [
         BrowserModule,

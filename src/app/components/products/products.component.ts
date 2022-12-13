@@ -25,6 +25,16 @@ export class ProductsComponent implements OnInit {
 
   canEdit: boolean = false;
 
+  toggleAdm(){
+    this.canEdit=!this.canEdit;
+    if(this.canEdit){
+      document.querySelector('#adm')!.innerHTML="РЕЖИМ ПОЛЬЗОВАТЕЛЯ";
+    }
+    else{
+      document.querySelector('#adm')!.innerHTML="РЕЖИМ АДМИНИСТРАТОРА";
+    }
+  }
+
   ngOnInit(): void {
     this.canEdit=false;
     this.productsSubscription = this.ProductsService.getProducts().subscribe((data)=>

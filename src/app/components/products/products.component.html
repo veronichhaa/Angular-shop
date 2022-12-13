@@ -1,27 +1,29 @@
 <div class="toolbar no-select" style="margin-top: 30px">
   <h3>КАТАЛОГ</h3>
-  <button *ngIf="canEdit" class="button" (click)="openDialog()">ДОБАВИТЬ ТОВАР</button>
+  <button *ngIf="canEdit" class="button" (click)="openDialog()" style="height: 35px; margin-left: 10px">ДОБАВИТЬ ТОВАР</button>
   <span class="example-spacer"></span>
+  <button id="adm" style="height: 30px; background-color: white; border: #1D1D1D 1.5px solid; cursor: pointer" (click)="toggleAdm()">РЕЖИМ АДМИНИСТРАТОРА</button>
 </div>
-<!--<div class="toolbar no-select">-->
-<!--  <span>20</span>-->
-<!--  <mat-slider-->
-<!--    [(ngModel)]="price"-->
-<!--    color="primary"-->
-<!--    step="1"-->
-<!--    min="20"-->
-<!--    max="500">-->
-<!--  </mat-slider>-->
-<!--  <span>{{price}}</span>-->
-<!--  <span class="example-spacer"></span>-->
-<!--  <div class="example-form">-->
-<!--    <mat-form-field class="example-full-width">-->
-<!--      <mat-label style="margin-left: 30px;">ПОИСК</mat-label>-->
-<!--      <mat-icon>search</mat-icon>-->
-<!--      <input type="text" matInput placeholder="ПОИСК" [(ngModel)]="search">-->
-<!--    </mat-form-field>-->
-<!--  </div>-->
-<!--</div>-->
+<mat-toolbar class="toolbar no-select">
+  <span>20</span>
+  <mat-slider
+    [(ngModel)]="price"
+    color="primary"
+    step="1"
+    min="40"
+    max="200">
+  </mat-slider>
+  <span>{{price}}</span>
+  <span class="example-spacer"></span>
+  <div class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label style="margin-left: 30px;">ПОИСК</mat-label>
+      <mat-icon>search</mat-icon>
+      <input type="text" matInput placeholder="ПОИСК" [(ngModel)]="search">
+    </mat-form-field>
+  </div>
+
+</mat-toolbar>
     <div class="container" *ngIf="products">
       <div class="card" *ngFor="let product of products | pricefilter:price:'info'|search:search:'title'">
         <div class="card_image" [routerLink]="['/products', product.id]" style="cursor: pointer">
